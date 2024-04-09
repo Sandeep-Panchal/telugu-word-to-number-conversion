@@ -30,7 +30,17 @@ pip install telugu-words-to-number
 !pip install telugu-words-to-number
 ```
 
+### Inference
+```
+# In the CMD terminal, go to the path ./telugu_words_numbers/scripts/ and run the "inference.py"
+
+$ python3 inference.py
+
+# Note: Comment/uncomment as mentioned in the inference.py script
+```
+
 ### Usage
+
 ```
 # For single text conversion
 
