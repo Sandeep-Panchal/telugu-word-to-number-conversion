@@ -95,5 +95,5 @@ Converted Text:  భరత్ కి 700 పంపు
 
 ```
 
-## Issues and Contributions
-If you encounter any issues or would like to contribute to this project, please visit the GitHub repository.
+### Issues and Contributions
+If you encounter any issues or would like to contribute to this project, please visit the [GitHub repository](https://github.com/Sandeep-Panchal/telugu-word-to-number-conversion/tree/main).
