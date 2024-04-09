@@ -1,5 +1,7 @@
 ## Telugu Number-Words To Numbers Conversion
 
+#### Python Package Link: [telugu-words-numbers](https://pypi.org/project/telugu-words-numbers/)
+
 ### Overview
 - The Telugu Number-Words to Numbers Conversion package is a Python library that enables developers to convert numerical representations written in Telugu language text (using words) into their equivalent numerical values.
 
