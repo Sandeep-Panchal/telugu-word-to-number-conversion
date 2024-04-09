@@ -39,7 +39,7 @@ obj = tel_word_num()
 
 text = "దీపిక కి అరవై పంపండి"
 number, converted_text = obj.word_number_conversion(text)
-print('Number: ', number, '\n')
+print('Number: ', number)
 print('Original Text: ', text)
 print('Converted Text: ', converted_text)
 ```
