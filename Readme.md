@@ -32,7 +32,7 @@ pip install telugu-words-to-number
 
 ### Inference
 ```
-# In the CMD terminal, go to the path ./telugu_words_numbers/scripts/ and run the "inference.py"
+# In the CMD terminal, go to the home where inference.py is present and run it as below
 
 $ python3 inference.py
 
@@ -43,6 +43,7 @@ $ python3 inference.py
 
 ```
 # For single text conversion
+# Go to the path where telugu_word_to_number.py is present
 
 from telugu_word_to_number import TeluguWordsToNumber as tel_word_num
 
@@ -64,6 +65,7 @@ Converted Text:  దీపిక కి 60 పంపండి
 ```
 ```
 # For multiple texts conversion loop over list of Telugu texts
+# Go to the path where telugu_word_to_number.py is present
 
 from telugu_word_to_number import TeluguWordsToNumber as tel_word_num
 
