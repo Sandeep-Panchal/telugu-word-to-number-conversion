@@ -11,7 +11,8 @@ with codecs.open(os.path.join(here, "README.srt"), encoding="utf-8") as fh:
 setup(
     name="telugu_words_numbers",
     packages=find_packages(),
-    version='0.0.5',
+    package_data={'telugu_words_numbers': ['json_files/*.json']},
+    version='0.0.6',
     license='MIT',
     author="Sandeep Panchal",
     author_email="sandeep.panchal545@gmail.com",
