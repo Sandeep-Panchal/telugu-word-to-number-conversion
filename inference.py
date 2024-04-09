@@ -1,5 +1,8 @@
 # call the module/class
-from telugu_word_to_number import TeluguWordsToNumber
+import sys
+sys.path.append('.')
+
+from telugu_words_numbers import telugu_word_to_number as twn
 from typing import List
 
 # list of input texts
@@ -36,7 +39,7 @@ def multiple_text_inference(texts: List[str]) -> None:
 if __name__ == "__main__":
 
     # creating and object of the class TeluguWordsToNum
-    obj = TeluguWordsToNumber()
+    obj = twn.TeluguWordsToNumber()
 
     # # comment/uncomment for single text inference
     text = "దీపిక కి అరవై పంపండి"

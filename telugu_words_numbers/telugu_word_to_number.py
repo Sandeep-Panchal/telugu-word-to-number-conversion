@@ -1,5 +1,6 @@
 # importing required libraries
-
+import sys
+sys.path.append("./")
 from text2digits import text2digits
 from difflib import SequenceMatcher
 import re
@@ -17,9 +18,9 @@ class TeluguWordsToNumber:
         self.t2d = text2digits.Text2Digits()
 
         # loading the json file containing telugu numbers dictionary
-        self.num_word_dict = self.json_load_method("../json_files/telugu_numbers.json")["telugu_dict"]
+        self.num_word_dict = self.json_load_method("./json_files/telugu_numbers.json")["telugu_dict"]
 
-        self.currency_units_dict = self.json_load_method("../json_files/telugu_currency_units.json")["telugu_units"]
+        self.currency_units_dict = self.json_load_method("./json_files/telugu_currency_units.json")["telugu_units"]
 
         # thresholds of unigram and bigram
         self.unigram_threshold, self.bigram_threshold = 0.8, 0.9
@@ -208,3 +209,15 @@ class TeluguWordsToNumber:
         except:
             num = 0
             return num, None
+
+# if __name__ == "__main__":
+
+#     # creating and object of the class TeluguWordsToNum
+#     obj = TeluguWordsToNumber()
+
+#     # # comment/uncomment for single text inference
+#     text = "దీపిక కి అరవై పంపండి"
+#     number, converted_text = obj.word_number_conversion(text)
+#     print("Number: ", number)
+#     print("Original Text: ", text)
+#     print("Converted Text: ", converted_text)
