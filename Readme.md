@@ -10,6 +10,8 @@
 ### Create a virtual environment if require with the python version 3.8 or more
 ```
 conda create -n telugu_num_env python=3.8
+
+# Replace "telugu_num_env" with other name according to you
 ```
 
 ### Supporting packages to be installed (Additional packages can be installed if require)
@@ -42,9 +44,8 @@ number, converted_text = obj.word_number_conversion(text)
 print('Number: ', number)
 print('Original Text: ', text)
 print('Converted Text: ', converted_text)
-```
 
-```
+
 # Output
 
 Number:  60.0
@@ -70,6 +71,17 @@ for text in texts:
     print('Original Text: ', text)
     print('Converted Text: ', converted_text)
     print('-'*20, '\n')
+
+# Output
+
+Number:  60.0
+Original Text:  దీపిక కి అరవై పంపండి
+Converted Text:  దీపిక కి 60 పంపండి
+-------------------- 
+
+Number:  700.0
+Original Text:  భరత్ కి ఏడు వందలు పంపు
+Converted Text:  భరత్ కి 700 పంపు
 
 ```
 
