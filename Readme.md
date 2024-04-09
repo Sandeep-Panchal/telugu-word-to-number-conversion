@@ -34,8 +34,11 @@ pip install telugu-words-to-number
 
 from telugu_word_to_number import TeluguWordsToNumber as tel_word_num
 
+# create an object instance
+obj = tel_word_num()
+
 text = "దీపిక కి అరవై పంపండి"
-number, converted_text = tel_word_num.word_number_conversion(text)
+number, converted_text = obj.word_number_conversion(text)
 print('Number: ', number, '\n')
 print('Original Text: ', text)
 print('Converted Text: ', converted_text)
@@ -53,13 +56,16 @@ Converted Text:  దీపిక కి 60 పంపండి
 
 from telugu_word_to_number import TeluguWordsToNumber as tel_word_num
 
+# create an object instance
+obj = tel_word_num()
+
 texts = [
             "దీపిక కి అరవై పంపండి",
             "భరత్ కి ఏడు వందలు పంపు"
     ]
 
 for text in texts:
-    number, converted_text = tel_word_num.word_number_conversion(text)
+    number, converted_text = obj.word_number_conversion(text)
     print('Number: ', number)
     print('Original Text: ', text)
     print('Converted Text: ', converted_text)
