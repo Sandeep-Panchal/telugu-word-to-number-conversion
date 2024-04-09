@@ -1,2 +1,2 @@
-numpy
 text2digits
+numpy

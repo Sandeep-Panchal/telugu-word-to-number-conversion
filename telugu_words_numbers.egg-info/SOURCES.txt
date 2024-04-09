@@ -1,5 +1,8 @@
+LICENSE
 README.md
 setup.py
+telugu_words_numbers/__init__.py
+telugu_words_numbers/telugu_word_to_number.py
 telugu_words_numbers.egg-info/PKG-INFO
 telugu_words_numbers.egg-info/SOURCES.txt
 telugu_words_numbers.egg-info/dependency_links.txt
