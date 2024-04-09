@@ -10,7 +10,6 @@
 ### Create a virtual environment if require with the python version 3.8 or more
 ```
 conda create -n telugu_num_env python=3.8
-
 ```
 
 ### Supporting packages to be installed (Additional packages can be installed if require)
