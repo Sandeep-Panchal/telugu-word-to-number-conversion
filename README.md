@@ -39,15 +39,12 @@ $ python3 inference.py
 # Note: Comment/uncomment as mentioned in the inference.py script
 ```
 
-### Usage
 
+### Usage for single text conversion
 ```
-# For single text conversion
-# Go to the path where telugu_word_to_number.py is present
+from telugu_words_numbers import TeluguWordsToNumber
 
-from telugu_word_to_number import TeluguWordsToNumber
-
-# create an object instance
+# creating and object of the class TeluguWordsToNum
 converter = TeluguWordsToNumber()
 
 text = "దీపిక కి అరవై పంపండి"
@@ -55,24 +52,21 @@ number, converted_text = converter.word_number_conversion(text)
 print('Number: ', number)
 print('Original Text: ', text)
 print('Converted Text: ', converted_text)
+```
 
-
-# Output
-
+### Out of single text conversion
+```
 Number:  60.0
 Original Text:  దీపిక కి అరవై పంపండి
 Converted Text:  దీపిక కి 60 పంపండి
 ```
 
+### Usage for multiple text conversion
 ```
-# For multiple texts conversion loop over list of Telugu texts
-# Go to the path where telugu_word_to_number.py is present
+from telugu_words_numbers import TeluguWordsToNumber
 
-from telugu_word_to_number import TeluguWordsToNumber
-
-# create an object instance
+# creating and object of the class TeluguWordsToNum
 converter = TeluguWordsToNumber()
-
 texts = [
             "దీపిక కి అరవై పంపండి",
             "భరత్ కి ఏడు వందలు పంపు"
@@ -84,14 +78,14 @@ for text in texts:
     print('Original Text: ', text)
     print('Converted Text: ', converted_text)
     print('-'*20, '\n')
+```
 
-# Output
-
+### Output of multiple text conversion
+```
 Number:  60.0
 Original Text:  దీపిక కి అరవై పంపండి
 Converted Text:  దీపిక కి 60 పంపండి
 -------------------- 
-
 Number:  700.0
 Original Text:  భరత్ కి ఏడు వందలు పంపు
 Converted Text:  భరత్ కి 700 పంపు
