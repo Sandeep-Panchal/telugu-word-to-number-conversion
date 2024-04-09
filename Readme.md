@@ -1,25 +1,25 @@
-# Telugu Number-Words To Numbers Conversion
+## Telugu Number-Words To Numbers Conversion
 
-## Overview
+### Overview
 - The Telugu Number-Words to Numbers Conversion package is a Python library that enables developers to convert numerical representations written in Telugu language text (using words) into their equivalent numerical values.
 
-## Features
+### Features
 - Convert Telugu number-words to numerical values.
 - Supports a wide range of Telugu numerical representations.
 
-## Create a virtual environment if require with the python version 3.8 or more
+### Create a virtual environment if require with the python version 3.8 or more
 ```
 conda create -n telugu_num_env python=3.8
 
 ```
 
-## Supporting packages to be installed (Additional packages can be installed if require)
+### Supporting packages to be installed (Additional packages can be installed if require)
 ```
 text2digits
 numpy
 ```
 
-## Installation with `pip'
+### Installation with `pip'
 ```
 # From CMD terminal
 pip install telugu-words-to-number
@@ -29,7 +29,7 @@ pip install telugu-words-to-number
 !pip install telugu-words-to-number
 ```
 
-## Usage
+### Usage
 ```
 # For single text conversion
 
