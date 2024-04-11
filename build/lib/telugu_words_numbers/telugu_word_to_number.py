@@ -21,11 +21,9 @@ class TeluguWordsToNumber:
         # get the json files path
         self.dir_name = os.path.dirname(__file__)
         self.tel_num_json = os.path.join(self.dir_name, "json_files", "telugu_numbers.json")
-        self.tel_cur_json = os.path.join(self.dir_name, "json_files", "telugu_currency_units.json")
         
         # load the json files
         self.num_word_dict = self.json_load_method(self.tel_num_json)["telugu_dict"]
-        self.currency_units_dict = self.json_load_method(self.tel_cur_json)["telugu_units"]
 
         # thresholds of unigram and bigram
         self.unigram_threshold, self.bigram_threshold = 0.8, 0.9
@@ -91,47 +89,6 @@ class TeluguWordsToNumber:
             return sum(l)
         else:
             return None
-
-    # method logic for telugu rupees and paise
-    def rupees_paise_logic(self,
-                           text: str
-                        ) -> Union[int, float]:
-
-        # get the paise and rupees variations
-        paise_variations = self.currency_units_dict["paise_unit"]
-        rupees_variations = self.currency_units_dict["rupees_unit"]
-
-        if any(variation in text for variation in paise_variations):
-            try:
-                if any(variation in text for variation in rupees_variations):
-                    for variation in rupees_variations:
-                        if variation in text:
-                            parts = text.split(variation)
-                            paise_amount = self.t2d.convert(parts[1])
-                            paise_amount = float(re.sub(r"\D", "", paise_amount))
-
-                            rupees_amount = self.t2d.convert(parts[0])
-                            rupees_amount = float(re.sub(r"\D", "", rupees_amount))
-                            amt = rupees_amount + (paise_amount / 100)
-                else:
-                    txt_amt = self.t2d.convert(text)
-                    amt = self.handle_thousand_pattern(txt_amt)
-                    if amt:
-                        amt = amt / 100
-                    else:
-                        amt = float(re.sub(r"\D", "", txt_amt)) / 100
-            except:
-                amt = 0
-        else:
-            try:
-                txt_amt = self.t2d.convert(text)
-                amt = self.handle_thousand_pattern(txt_amt)
-                if not amt:
-                    amt = float(re.sub(r"\D", "", txt_amt))
-            except:
-                amt = 0
-
-        return amt
 
     # method for n-gram (uni-gram and bi-gram)
     def n_gram_method(self,
@@ -204,13 +161,12 @@ class TeluguWordsToNumber:
                     .replace("900", "9 100")
                 )
 
-            # calling telugu_paise_logic function for paise logic
-            num = self.rupees_paise_logic(text_org)
-
             # applying number logic with package text2digit
             converted_text = self.t2d.convert(text_org)
+            num = re.sub(r"\D", " ", converted_text)
+            num = re.sub(" +", " ", num).strip()
+            num = list(num.split())
             return num, converted_text
 
         except:
-            num = 0
-            return num, None
+            return None, None

@@ -4,7 +4,7 @@ import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with codecs.open(os.path.join(here, "README.srt"), encoding="utf-8") as fh:
+with codecs.open(os.path.join(here, "DESCRIPTION.md"), encoding="utf-8") as fh:
     long_description = fh.read()
 
 # Setting up
@@ -12,7 +12,7 @@ setup(
     name="telugu_words_numbers",
     packages=find_packages(),
     package_data={'telugu_words_numbers': ['json_files/*.json']},
-    version='0.0.6',
+    version='0.0.8',
     license='MIT',
     author="Sandeep Panchal",
     author_email="sandeep.panchal545@gmail.com",
