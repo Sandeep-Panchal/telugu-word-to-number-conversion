@@ -7,7 +7,7 @@ import re
 import os
 import json
 import numpy as np
-from typing import Tuple, Union
+from typing import Tuple, Union, List
 
 
 class TeluguWordsToNumber:
@@ -145,7 +145,7 @@ class TeluguWordsToNumber:
     # method logic for indic word to num
     def word_number_conversion(self,
                                text_org: str,
-                            ) -> Tuple[int, Union[str, None], str]:
+                            ) -> Union[Tuple[List[int], str], Tuple[None, None]]:
 
         try:
             text_org = self.n_gram_method(text_org)
